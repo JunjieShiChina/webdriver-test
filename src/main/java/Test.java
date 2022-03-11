@@ -1,4 +1,6 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -13,6 +15,9 @@ public class Test {
         WebDriver webDriver = new ChromeDriver(options);
 
         webDriver.get("https://www.baidu.com");
+
+        webDriver.findElement(By.id("kw")).sendKeys("这是个自动化脚本");
+        webDriver.findElement(By.id("su")).click();
 
         webDriver.manage().window().maximize();
 
